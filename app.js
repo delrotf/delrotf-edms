@@ -73,7 +73,7 @@ function initDBConnection() {
         // Alternately you could point to a local database here instead of a
         // Bluemix service.
         // url will be in this format: https://username:password@xxxxxxxxx-bluemix.cloudant.com
-        dbCredentials.url = getDBCredentialsUrl(fs.readFileSync("vcap-local.json", "utf-8"));
+        dbCredentials.url = getDBCredentialsUrl(fs.readFileSync("./config/vcap-local.json", "utf-8"));
     }
 
     cloudant = require('cloudant')(dbCredentials.url);
@@ -428,6 +428,43 @@ app.get('/api/favorites', function(request, response) {
     });
 
 });
+
+// Employee Data CRUD - {username, firstname, lastname, email, password}
+app.get('/api/employees', function(request, response) {
+    console.log("Get Invoked..");
+    
+});
+app.post('/api/employees', function(request, response) {
+    console.log("Create Invoked..");
+    
+});
+app.put('/api/employees', function(request, response) {
+    console.log("Update Invoked..");
+    
+});
+app.delete('/api/employees', function(request, response) {
+    console.log("Delete Invoked..");
+
+});
+
+// Audit Log CRUD
+app.get('/api/auditlog', function(request, response) {
+    console.log("Get Invoked..");
+    
+});
+app.post('/api/auditlog', function(request, response) {
+    console.log("Create Invoked..");
+    
+});
+app.put('/api/auditlog', function(request, response) {
+    console.log("Update Invoked..");
+    
+});
+app.delete('/api/auditlog', function(request, response) {
+    console.log("Delete Invoked..");
+
+});
+
 
 
 http.createServer(app).listen(app.get('port'), '0.0.0.0', function() {
