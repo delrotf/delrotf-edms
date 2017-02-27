@@ -290,7 +290,6 @@ app.get('/api/favorites', function(request, response) {
 
     console.log("Get method invoked.. ")
 
-    //db = cloudant.use(dbCredentials.dbName);
     var docList = [];
     var i = 0;
     db.list(function(err, body) {
