@@ -6,17 +6,19 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "4.13.x",
-    "ejs": "2.4.x",
-    "cloudant": "1.4.x",
+    "bcrypt": "^1.0.2",
+    "bcryptjs": "^2.4.3",
     "body-parser": "1.14.x",
-    "method-override": "2.3.x",
-    "morgan": "1.6.x",
+    "cloudant": "1.4.x",
+    "connect-multiparty": "2.0.x",
+    "ejs": "2.4.x",
     "errorhandler": "1.4.x",
-    "connect-multiparty": "2.0.x"
+    "express": "4.13.x",
+    "method-override": "2.3.x",
+    "morgan": "1.6.x"
   },
   "repository": {},
   "engines": {
-  	"node": "4.x"
+    "node": "4.x"
   }
 }

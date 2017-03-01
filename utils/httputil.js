@@ -3,7 +3,7 @@ module.exports = {
         return String(str).replace(/&(?!amp;|lt;|gt;)/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
     },
     
-    createResponseData: function(id, name, value, attachments) {
+    createResponseData: function(jsonDoc, attachments) {
     
         var responseData = {
             id: id,

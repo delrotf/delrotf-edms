@@ -1,0 +1,32 @@
+<!--Registration Panel-->
+<div class="container">
+  <div class="col-md-5 card">
+      <div class="card-block ">
+        <form class="form-signin" ng-submit="btnRegisterDisabled=true; createEmployee(user)" autocomplete="off">
+          <h4 class="form-signin-heading spacer">Please fill out the form</h4>
+          
+          <label for="inputUsername" class="sr-only">Username</label>
+          <input ng-model="user._id" type="text" id="inputUsername" name="_id" class="form-control spacer" placeholder="Username" required autofocus>
+          
+          <label for="inputFirstname" class="sr-only">Firstname</label>
+          <input ng-model="user.firstname" type="text" id="inputFirstname" name="firstname" class="form-control" placeholder="Firstname" required>
+          
+          <label for="inputLastname" class="sr-only">Lastname</label>
+          <input ng-model="user.lastname" type="text" id="inputLastname" name="lastname" class="form-control" placeholder="Lastname" required>
+          
+          <label for="inputEmail" class="sr-only">Email</label>
+          <input ng-model="user.email" type="email" id="inputEmail" name="email" class="form-control" placeholder="Email" required>
+          
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input ng-model="user.password" type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+          
+          <label for="inputPassword2" class="sr-only">Confirm Password</label>
+          <input ng-model="inputPassword2" type="password" id="inputPassword2" class="form-control" placeholder="Type again your password" required>
+          
+          <div class="spacer"></div>
+          <button ng-disabled="btnRegisterDisabled" class="btn btn-lg btn-primary" type="submit">Submit</button>
+        </form>
+      </div>
+  </div>
+</div>
+<!--/.Panel-->

@@ -1,5 +1,5 @@
 var express = require("express"),
-    db = require('../../config/db.js'),
+    db = require('../../db/db.js'),
     dbutil = require('../../utils/dbutil'),
     httputil = require('../../utils/httputil'),
     multipart = require('connect-multiparty'),

@@ -1,0 +1,22 @@
+<!--Login Panel-->
+<div class="container">
+  <div class="col-md-5 card" ng-class="{shake: shake}">
+      <div class="card-block ">
+        <form class="form-signin" ng-submit="btnLoginDisabled=true; grantAccess(user)" autocomplete="off">
+          <h4 class="form-signin-heading">Please sign in</h4>
+          <div class="spacer"><div class="alert alert-danger" role="alert" ng-show="withError">Login failed. Please try again</div></div>
+          <label for="inputUsername" class="sr-only">Username</label>
+          <input ng-model="user._id" type="text" id="inputUsername" name="_id" class="form-control spacer" placeholder="Username" required autofocus>
+          
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input ng-model="user.password" type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+          
+          <div class="checkbox">
+          </div>
+          <div class="spacer"></div>
+          <button ng-disabled="btnLoginDisabled" class="btn btn-lg btn-primary" type="submit">Submit</button>
+        </form>
+      </div>
+  </div>
+</div>
+<!--/.Panel-->

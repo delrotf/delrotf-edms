@@ -35,9 +35,16 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 
-require('./app/routes/favorites')(app);
-require('./app/routes/employee')(app);
+app.post('/', function(req, res){
+        res.render('index2.html', { title: 'Employee Data Management System' });
+    }
+  );
 
+require('./app/routes/favorites')(app);
+require('./app/routes/employees')(app);
+require('./app/routes/auditlogs')(app);
+
+//app.get('/*', routes.index);
 
 http.createServer(app).listen(app.get('port'), '0.0.0.0', function() {
     console.log('Express server listening on port ' + app.get('port'));
